@@ -424,7 +424,7 @@ html{
 				width: 7%;
 				min-width: 47px;
 			 	a{
-					background-image: url("../images/starter/poubelle.svg");
+					background-image: url("../scss/starter/images/poubelle.svg");
 					background-repeat: no-repeat;
 					text-indent: -9999px;
 					background-position: center center;
@@ -458,9 +458,9 @@ html{
 					.rating-box {
 						width: 100%;
 						height:15px;
-						background: url('../images/starter/black-stars.PNG') no-repeat;
+						background: url('../scss/starter/images/black-stars.PNG') no-repeat;
 						.rating {
-							background: url('../images/starter/check-stars.PNG') no-repeat #fff;
+							background: url('../scss/starter/images/check-stars.PNG') no-repeat #fff;
 							height:15px;
 						}
 					}
@@ -573,7 +573,7 @@ html{
 					background-color: $starter_background-color;
 					padding: 10px 10px 10px 15px;
 					margin-top: 0px;
-					background-image: url("../images/starter/fleche-grise-bas.svg");
+					background-image: url("../scss/starter/images/fleche-grise-bas.svg");
 					background-repeat: no-repeat;
 					background-position: right 12px center;
 					background-size: 4%;
@@ -585,7 +585,7 @@ html{
 						color: #fff;
 					}
 					&.active{
-						background-image: url("../images/starter/fleche-grise-haut.svg");
+						background-image: url("../scss/starter/images/fleche-grise-haut.svg");
 						background-repeat: no-repeat;
 						background-position: right 12px center;
 						background-size: 4%;

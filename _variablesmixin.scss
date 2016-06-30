@@ -1,66 +1,79 @@
-html{	
-	////////////////////////////////////////////////////////////////
-	/////////////**********MIXIN**********/////////////
-	////////////////////////////////////////////////////////////////
-	@mixin starter_style-titre() {
-		text-transform: uppercase;
-		font-weight: 500;
-		font-size: 1.8rem;
-		line-height: 1.9rem;
-		margin-top: 0;
-	}
-	@mixin starter_style-sous-titre() {
-		text-transform: uppercase;
-		font-weight: normal;
-		font-size: 1.2rem;
-		color: $starter_background-color;
-		margin-bottom: 0;
-		margin-top: 10px;
-	}
 
-	@mixin starter_style-sous-sous-titre() {
-		color: #676767;
-		font-size: 1.1rem;
-		font-weight: 600;
-		margin-bottom: 0;
-		margin-top: 5px;
-	}
-	@mixin starter_transition{
-		-webkit-transition: all 0.2s ease-in 0s;
-		-moz-transition: all 0.2s ease-in 0s;
-		-ms-transition: all 0.2s ease-in 0s;
-		-o-transition: all 0.2s ease-in 0s;
-		transition: all 0.2s ease-in 0s;
-	}
-
-	@mixin starter_button-principal{
-		font-size: 1.1rem;
-		padding: 0.5rem 3rem;
-		background-color: $starter_maincolor;
-		color: #fff;
-		border: none;
-		display: block;
-		cursor: pointer;
-		border: 2px solid $starter_maincolor;
-		@include starter_transition;
-	}
-
-	@mixin starter_button-secondaire{
-		font-size: 1.1rem;
-		padding: 0.5rem 3rem;
-		background-color: #fff;
-		color: $starter_maincolor;
-		border: 2px solid $starter_maincolor;
-		display: block;
-		cursor: pointer;
-		@include starter_transition;
-	}
-
-	////////////////////////////////////////////////////////////////
-	/////////////**********VARIABLES**********/////////////
-	////////////////////////////////////////////////////////////////
-	$starter_maincolor : #fd8700;
-	$starter_background-color: #1c1c1c;
-	$starter_mainfont: arial;
-	$max-width: 1255px;
+////////////////////////////////////////////////////////////////
+/////////////**********MIXIN**********/////////////
+////////////////////////////////////////////////////////////////
+/*Titres des pages h1*/
+@mixin starter_style-titre() {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 1.9rem;
+	margin-top: 0;
 }
+/*Sous titres h2*/
+@mixin starter_style-sous-titre() {
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 1.2rem;
+	color: $starter_background-color;
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+/*Sous sous titres h3*/
+@mixin starter_style-sous-sous-titre() {
+	color: #676767;
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+/*Transition*/
+@mixin starter_transition{
+	-webkit-transition: all 0.2s ease-in 0s;
+	-moz-transition: all 0.2s ease-in 0s;
+	-ms-transition: all 0.2s ease-in 0s;
+	-o-transition: all 0.2s ease-in 0s;
+	transition: all 0.2s ease-in 0s;
+}
+/*Bouton principal*/
+@mixin starter_button-principal{
+	font-size: 1.1rem;
+	padding: 0.5rem 3rem;
+	background-color: $starter_maincolor;
+	color: #fff;
+	border: none;
+	display: block;
+	cursor: pointer;
+	border: 2px solid $starter_maincolor;
+	@include starter_transition;
+}
+/*Bouton secondaire*/
+@mixin starter_button-secondaire{
+	font-size: 1.1rem;
+	padding: 0.5rem 3rem;
+	background-color: #fff;
+	color: $starter_maincolor;
+	border: 2px solid $starter_maincolor;
+	display: block;
+	cursor: pointer;
+	@include starter_transition;
+}
+
+////////////////////////////////////////////////////////////////
+/////////////**********VARIABLES**********/////////////
+////////////////////////////////////////////////////////////////
+/*Couleur principale*/
+$starter_maincolor : #fd8700;
+/*Couleur de fond des tableaux*/
+$starter_background-color: #1c1c1c;
+/*Couleur reussite*/
+$starter_reussite: #00b365;
+/*Couleur erreur*/
+$starter_erreur: #c42635;
+
+/*Typographie*/
+$starter_mainfont: arial;
+
+/*Taille maximale de container*/
+$max-width: 1255px;
+
