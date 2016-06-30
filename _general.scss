@@ -1,0 +1,108 @@
+html{
+	////////////////////////////////////////////////////////////////
+	/////////////**********STRUCTURE GENERALE**********/////////////
+	////////////////////////////////////////////////////////////////
+
+	*{
+		box-sizing: border-box;
+	}
+
+	body{
+		margin: 0;
+		position: relative;
+		font-family: arial;
+	}
+
+
+	img{
+		border: none;
+		max-width: 100%;
+	}
+
+	.clearfix{
+		clear: both;
+	}
+
+	/*CHAMPS*/
+	input{
+		font-size: 0.9rem;
+		padding: 7px 12px;
+		border: 1px solid #dedede;
+		border-radius: 2px;
+	}
+	textarea{
+		font-size: 0.9rem;
+		padding: 7px 12px;
+		border: 1px solid #dedede;
+		border-radius: 2px;
+	}
+
+	select{
+		width: 70px;
+		background-image: url("../images/starter/fleche-grise-bas.svg");
+		background-repeat: no-repeat;
+		background-position: right 5px center;
+		background-size: 15px auto;
+	    -moz-appearance: none;
+	    cursor: pointer;
+	    font-size: 0.9rem;
+		padding: 7px 25px 7px 12px;
+		border: 1px solid #dedede;
+	}
+
+	select::-ms-expand {
+	    display: none;
+	}
+
+	/*RENDU PROPRE DES BOUTONS ET CHAMPS SUR MOBILE TABLETTE*/
+
+	@include gridle_state ( mobile-moblet ) {
+		select, input:not([type="radio"]):not([type="checkbox"]), textarea{
+		    -webkit-appearance: none;
+		    -moz-appearance: none;
+		    border-radius: 0;
+		    -webkit-border-radius: 0;
+		}
+	}
+
+	@include gridle_state ( tablet ) {
+		select, input:not([type="radio"]):not([type="checkbox"]), textarea{
+		    -webkit-appearance: none;
+		    -moz-appearance: none;
+		    border-radius: 0;
+		    -webkit-border-radius: 0;
+		}
+	}
+
+	/*TAILLE DES POLICES*/
+
+	@include gridle_state ( mobile ) {
+	    &{
+		font-size: 75%;
+		line-height: 1.3rem;
+		}
+	};
+
+	@include gridle_state ( moblet ) {
+	    &{
+		font-size: 80%;
+		line-height: 1.6rem;
+		}
+	};
+
+	@include gridle_state ( desktop ) {
+	    &{
+		font-size: 93.8%;
+		line-height: 1.5rem;
+		}
+	};
+
+	@include gridle_state ( tablet ) {
+	    &{
+		font-size: 85%;
+		line-height: 1.5rem;
+		}
+	};
+}
+
+

@@ -1,0 +1,148 @@
+html{
+	.customer-account-login{
+		.main-container {
+			margin:0 auto;
+			max-width:$max-width;
+			display: block;
+			float: none;
+			.page-title{
+				@include gridle_grid ( 12 );
+				h1 {
+					padding-bottom : 10px;
+			        border-bottom: 1px solid #cdcdcd;
+					@include starter_style-titre;
+				}
+			}
+			.col2-set{
+				h2{
+					@include starter_style-sous-titre;
+					margin-bottom: 10px;
+				}
+				p.required {
+					font-size: 0.8rem;
+					float: right;
+				}
+				#is_subscribed{
+					float: left;
+				}
+				ul:not(.benefits) li{
+					margin-top: 10px;
+				}
+				.benefits{
+					margin-top: 10px;
+				}
+				label{
+					em{
+						color: $starter_maincolor;
+					}
+				}
+				button{
+					@include starter_button-principal;
+				}
+				button:hover{
+					@include starter_transition;
+					opacity: 0.8;
+				}
+				a{
+					color: $starter_maincolor;
+					font-weight: 700;
+					text-decoration: none;
+				}
+				a:hover{
+					opacity: 0.8;
+					@include starter_transition;
+				}
+				h3{
+					@include starter_style-sous-sous-titre;
+				}
+				strong{
+					font-weight: bold;
+				}
+				.fieldset{
+					padding-bottom: 10px;
+				}
+				#dummy{
+					display: none;
+				}
+				.remember-me-popup{
+					display: none;
+				}
+				.new-users{
+					.button{
+						@include starter_button-secondaire;
+						display: inline-block;
+						margin-top: 10px;
+					}
+					li{
+						list-style-type: disc;
+						list-style-position: inside;
+					}
+				}
+			}
+		}	
+		.footer-container{
+			clear: both;
+		}	
+	}
+	/////////////**********MOBILE-MOBLET**********/////////////
+
+	@include gridle_state ( mobile ) {
+		.customer-account-login{
+			.main-container{
+				input:not(#is_subscribed) {
+				    width: 100%;
+				}		
+			}
+		}
+	}
+
+	@include gridle_state ( moblet ) {
+		.customer-account-login{
+			.main-container{
+				input:not(#is_subscribed) {
+				    width: 80%;
+				}				
+			}
+		}
+	}
+
+	@include gridle_state ( mobile-moblet ) {
+		.customer-account-login{
+			.main-container{
+				input:not(#is_subscribed) {
+				    background: #fff;
+				}
+				.new-users{
+					@include gridle_grid ( 12 );
+					.button{
+						@include starter_button-secondaire;
+						display: inline-block;
+						margin-top: 10px;
+					}
+				}
+				.registered-users{
+					@include gridle_grid ( 12 );				
+				}				
+			}
+		}
+	}
+
+	/////////////**********TABLET-DESKTOP**********/////////////
+
+	@include gridle_state ( tablet-desktop ) {
+		.customer-account-login{
+			.main-container{
+				input:not(#is_subscribed) {
+				    width: 70%;
+				    background: #fff;
+				}	
+				.new-users{
+					@include gridle_grid ( 6 );
+				}
+				.registered-users{
+					@include gridle_grid ( 6 );				
+				}		
+			}
+		}
+	}
+}

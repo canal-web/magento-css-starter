@@ -1,0 +1,52 @@
+html{
+	/*ERREURS GENERALES*/
+	.validation-advice{
+		color: $starter_erreur;
+	}
+	.messages{
+		padding: 0;
+		margin-top: 5px;
+		li{
+			text-align: center;
+		}
+		.success-msg{
+			list-style-type: none;
+			ul{
+				list-style-type: none;
+				padding: 10px;
+				background-color: $starter_reussite;
+				color: #fff;
+				text-align: center;
+				a{
+					color: $starter_background-color;
+				}
+			}
+		}
+		.notice-msg{
+			list-style-type: none;
+			ul{
+				list-style-type: none;
+				padding: 10px;
+				background-color: $starter_erreur;
+				color: #fff;
+				text-align: center;
+				a{
+					color: $starter_background-color;
+				}
+			}
+		}
+		.error-msg{
+			list-style-type: none;
+			ul{
+				list-style-type: none;
+				padding: 10px;
+				background-color: $starter_erreur;
+				color: #fff;
+				text-align: center;
+				a{
+					color: $starter_background-color;
+				}
+			}
+		}
+	}
+}
