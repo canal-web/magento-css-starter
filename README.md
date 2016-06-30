@@ -1,5 +1,28 @@
 # Notice du Starter
 
+## Les documents à récuperer 
+* Positionnez tout ou une partie des documents qui vous interessent dans /scss/starter
+* Rendez-vous dans styles.scss pour associer les documents en question sur ce modèle : 
+    * @import 'starter/variablesmixin';
+    * @import 'starter/compte';
+    * @import 'starter/panier';
+    * @import 'starter/menu';
+    * @import 'starter/general';
+    * @import 'starter/connexioncompte';
+    * @import 'starter/messages';
+    * @import 'starter/panier-desktop';
+
+### Récuperer les documents
+
+###Liste des documents
+* **general.scss** : tout ce qui est commun à tous les sites, possibilité de changer l'aspect des input et select ainsi que les tailles de polices en fonction des résolutions
+* **_connexioncompte.scss** : uniquemement la page de connexion
+* **_compte.scss** : concerne toute la partie compte une fois connecté ainsi que la page d'inscription et le mot de passe oublié
+* **_messages.scss** : tous les messages d'erreur et de réussite
+* **_panier.scss** : processus panier, checkout et panier du menu
+* **_menu-mobile.scss**: uniquement le menu mobile
+* **_panier-desktop.scss**: uniquement le panier desktop
+
 ## Le document _variablesmixin.scss
 
 Avant de commencer, vérifier l'ensemble des variables et des mixin de ce document pour les adapter à la charte du site.
@@ -21,15 +44,6 @@ Avant de commencer, vérifier l'ensemble des variables et des mixin de ce docume
 * **$starter_erreur** : couleur des messages d'erreur
 
 ## Dans les autres documents 
-
-### Les documents à récuperer 
-Vous pouvez récuperer seulement une sélection de documents :
-* **general.scss** : tout ce qui est commun à tous les sites, possibilité de changer l'aspect des input et select ainsi que les tailles de polices en fonction des résolutions
-* **_connexioncompte.scss** : uniquemement la page de connexion
-* **_compte.scss** : concerne toute la partie compte une fois connecté ainsi que la page d'inscription et le mot de passe oublié
-* **_messages.scss** : tous les messages d'erreur et de réussite
-* **_panier.scss** : processus panier, checkout et panier du menu
-* **_menu.scss**: uniquement le menu mobile
 
 ### Les options
 * Possibilité de changer la couleur des SVG dans images

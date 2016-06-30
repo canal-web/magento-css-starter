@@ -31,15 +31,37 @@ html{
 								font-size: 0.9rem;
 							}
 						}
+						button{
+							display: none;
+							background-color: $starter_maincolor;
+							border: medium none;
+							color: #fff;
+							font-size: 0.7rem;
+							text-transform: uppercase;
+							padding: 3px;
+							cursor: pointer;
+							&.visible{
+								display: block;
+							}
+						}
 						button, input{
 							padding: 1px;
 							height: 27px;
+						}
+						td{
+							width: 100%;
+						}
+						th{
+							vertical-align: middle;
 						}
 						input{
 							width: 40px;
 							font-size: 0.7rem;
 							font-family: $starter_mainfont;
+							float: left;
+							margin-right: 3px;
 						}
+
 						a{
 							font-size: 0.9rem;
 							@include textegras;

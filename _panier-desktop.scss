@@ -1,0 +1,160 @@
+html{
+	@include gridle_state(tablet-desktop) {
+		.skip-links{
+			position: relative;
+			a{
+				text-decoration: none;
+			}
+			.header-minicart{
+				float: left;
+				margin-left: 5px;
+				padding: 0!important;
+				.block-cart{
+					background-color: $starter_bgclair;
+					display: none;
+					top: 50px;
+					right: 1rem;
+					background-color: #Fff;
+					border: 1px solid $starter_border;
+					position: absolute;
+					z-index: 2;
+					width: 360px;
+					padding: 10px;
+					.block-subtitle{
+						text-transform: uppercase;
+						font-family: $starter_mainfont;
+						margin-bottom: 10px;
+						.close{
+							float: right;
+							color: $starter_maincolor;
+							text-decoration: none;
+							font-size: 25px;
+							font-family: $starter_mainfont;
+							&:hover{
+								opacity: 0.8;
+								@include starter_transition;
+							}
+						}
+					}
+					p.empty{
+						font-family: $starter_mainfont;
+					}
+				}
+				.mini-products-list{
+					li{
+						overflow: hidden;
+						margin-bottom: 20px;
+						border-top: 1px solid $starter_border;
+						padding-top: 10px;
+						.product-image{
+							float: left;
+							width: 20%;
+						}
+						.product-details{
+							float: left;
+							width: 80%;
+							.product-name{
+								a{
+									font-family: $starter_mainfont;
+									text-transform: uppercase;
+									color: $starter_maincolor;
+									text-decoration: none;
+									font-size: 0.9rem;
+								}
+							}
+							button, input{
+								height: 27px;
+							}
+							button{
+								background-color: $starter_maincolor;
+								border: medium none;
+								color: #fff;
+								font-size: 0.7rem;
+								text-transform: uppercase;
+								padding: 3px;
+								cursor: pointer;
+								display: none;
+							}
+							button.visible{
+								display: inline-block;
+							}
+							input{
+								width: 40px;
+								font-size: 0.7rem;
+								font-family: $starter_mainfont;
+								border: 1px solid $starter_border;
+								background-color: #fff;
+								padding: 3px;
+							}
+							a{
+								color: $starter_maincolor;
+								font-size: 0.9rem;
+							}
+							a:hover{
+								@include starter_transition;
+								opacity: 0.8;
+							}
+							th, dt{
+								padding-right: 5px;
+								font-family: $starter_mainfont;
+								font-size: 0.9rem;
+							}
+							dt{
+								float: left;
+							}
+							dt:after{
+								content :":";
+							}
+							td span, dd{
+								font-family: $starter_mainfont;
+								font-size: 0.9rem;
+							}
+						}
+					}
+				}
+				.subtotal{
+					border-top: 1px solid $starter_border;
+					padding-top: 10px;
+					display: block;
+					text-align: center;
+					color: $starter_background-color;
+					font-family: $starter_mainfont;
+					text-transform: uppercase;
+					text-decoration: none;
+				}
+				.minicart-actions{
+					.checkout-button{
+						@include starter_button-principal;
+						display: block;
+						text-align: center;
+						text-transform: uppercase;
+						font-family: $starter_mainfont;
+						margin-top: 10px;
+						padding: 10px!important;
+						&:hover{
+							opacity: 0.8;
+							@include starter_transition;
+						}
+					}
+					.cart-link{
+						@include starter_button-secondaire;
+						display: block;
+						text-align: center;
+						text-transform: uppercase;
+						font-family: $starter_mainfont;
+						margin-top: 10px;
+						padding: 10px;
+						text-decoration: none;
+						&:hover{
+							opacity: 0.8;
+							@include starter_transition;
+						}
+					}
+				}
+				.block-cart.skip-active{
+					display: block;
+				}
+			}
+		}
+	}
+}
