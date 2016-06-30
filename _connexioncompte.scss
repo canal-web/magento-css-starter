@@ -56,7 +56,7 @@ html{
 					@include starter_style-sous-sous-titre;
 				}
 				strong{
-					font-weight: bold;
+					@include textegras;
 				}
 				.fieldset{
 					padding-bottom: 10px;

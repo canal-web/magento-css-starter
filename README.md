@@ -10,6 +10,7 @@ Avant de commencer, vérifier l'ensemble des variables et des mixin de ce docume
 * **Les transitions** : qui en général ne changent pas
 * **Les boutons principaux** : les plus visibles
 * **Les boutons secondaires** : en mineur, soit ghost, soit couleur moins visible, soit plus petits
+* **Textes en gras** : mixin au cas où il n'existe pas de font grasse 
 
 ### Les variables
 * **$starter_maincolor** : la couleur principale du site

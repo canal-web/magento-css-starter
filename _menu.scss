@@ -1,0 +1,333 @@
+	
+html{
+	/////////////////////////////////////////////////////////////////////////////
+	/********************************HEADER******************************/
+	/////////////////////////////////////////////////////////////////////////////
+	@include gridle_state(mobile-moblet) {
+		header{
+			position: relative;
+			.mini-products-list{
+				a{
+					text-decoration: none;
+				}
+				li{
+					overflow: hidden;
+					margin-bottom: 20px;
+					border-top: 1px solid $starter_border;
+					padding-top: 10px;
+					.product-image{
+						float: left;
+						width: 20%;
+					}
+					.product-details{
+						float: left;
+						width: 80%;
+						.product-name{
+							a{
+								@include textegras;
+								text-transform: uppercase;
+								color: $starter_maincolor;
+								text-decoration: none;
+								font-size: 0.9rem;
+							}
+						}
+						button, input{
+							padding: 1px;
+							height: 27px;
+						}
+						input{
+							width: 40px;
+							font-size: 0.7rem;
+							font-family: $starter_mainfont;
+						}
+						a{
+							font-size: 0.9rem;
+							@include textegras;
+							text-decoration: none;
+							color: $starter_maincolor;
+						}
+						a:hover{
+							@include starter_transition;
+							opacity: 0.8;
+						}
+						.btn-edit, .remove{
+							display: inline-block;
+						}
+						th, dt{
+							padding-right: 5px;
+							font-family: $starter_mainfont;
+							font-size: 0.9rem;
+						}
+						dt{
+							float: left;
+						}
+						dt:after{
+							content :":";
+						}
+						td span, dd{
+							font-family: $starter_mainfont;
+							font-size: 0.9rem;
+						}
+					}
+				}
+			}
+			.subtotal{
+				border-top: 1px solid $starter_border;
+				padding-top: 10px;
+				display: block;
+				text-align: center;
+				padding-bottom: 7px;
+				color: $starter_background-color;
+				font-family: $starter_mainfont;
+				text-transform: uppercase;
+			}
+			.minicart-actions{
+				.checkout-button{
+					@include starter_button-principal;
+					display: block;
+					text-align: center;
+					text-transform: uppercase;
+					@include textegras;
+					padding: 10px;
+					text-decoration: none;
+					&:hover{
+						@include starter_transition;
+						opacity: 0.8;
+					}
+				}
+				.cart-link{
+					@include starter_button-secondaire;
+					display: block;
+					text-align: center;
+					text-transform: uppercase;
+					@include textegras;
+					padding: 10px;
+					text-decoration: none;
+					&:hover{
+						@include starter_transition;
+						opacity: 0.8;
+					}
+				}
+			}
+			.block-cart{
+				display: none;
+				top: 37px;
+				right: 0;
+				left: 0;
+				background-color: #Fff;
+				border-top: 1px solid $starter_border;
+				border-bottom: 1px solid $starter_border;
+				position: absolute;
+				z-index: 2;
+				width: 100%;
+				padding: 10px;
+			}
+			.block-cart.skip-active{
+				display: block;
+			}
+			.header-minicart{
+				.block-cart{
+					.block-subtitle{
+						text-transform: uppercase;
+						font-family: $starter_mainfont;
+						margin-bottom: 10px;
+						.close{
+							float: right;
+							color: $starter_maincolor;
+							text-decoration: none;
+							font-size: 25px;
+							font-family: $starter_mainfont;
+							&:hover{
+								@include starter_transition;
+								opacity: 0.8;
+							}
+						}
+					}
+				}
+			}
+			#header-search{
+				@include gridle_grid ( 12 );
+				display: none;
+				position: absolute;
+				bottom: -83px;
+				right: 0;
+				left: 0;
+				background-color: $starter_bgclair;
+				z-index: 1;
+				form{
+					border-top: 1px solid $starter_border;
+					border-bottom: 1px solid $starter_border;
+				}
+				&.skip-active{
+					display: block;
+				}
+				.input-box{
+					padding: 10px 0px;
+					overflow: hidden;
+					label{
+						display: none;
+					}
+				}
+				input {
+				    float: left;
+				    width: 70%;
+				    padding: 2px;
+				    height: 25px;
+				    border-top: 1px solid $starter_border;
+				    border-bottom: 1px solid $starter_border;
+				    border-left: 1px solid $starter_border;
+				    border-right: none;
+				    font-family: $starter_mainfont;
+				    color: #000;
+				}
+				.button {
+				    float: left;
+				    width: 30%;
+				    padding: 2px;
+				    height: 25px;
+				    border-top: 1px solid $starter_border;
+				    border-bottom: 1px solid $starter_border;
+				    border-right: 1px solid $starter_border;
+				    border-left: none;
+				    background-image: url("../scss/starter/images/recherche-noire.svg");
+				    background-repeat: no-repeat;
+				    background-size: auto 60%;
+				    text-indent: -9999px;
+				    background-position: right 5px center;
+				    background-color: #fff;
+				    cursor: pointer;
+				}
+			}
+			.skip-content{
+				@include gridle_grid ( 12 );
+				display: none;
+				background-color: $starter_bgclair;
+				z-index: 10;
+				li{
+					padding: 5px 0px;
+					border-top: 1px solid $starter_border;
+					a{
+						font-family: $starter_mainfont;
+						display: block;
+						text-decoration: none;
+						color: $starter_background-color;
+					}
+					a:hover{
+						@include starter_transition;
+					}
+				}
+				nav{
+					border-bottom: 1px solid $starter_border;
+				}
+			}
+			.skip-content.skip-active{
+				display: block;
+			}
+			.sticky + .skip-content{
+				position: fixed;
+				top: 50px;
+			}
+		}
+		.skip-links{
+			margin-top: 20px;
+			border-top: 1px solid $starter_border;
+			position: relative;
+			.skip-nav, .skip-search{
+				@include gridle_grid ( 3 );
+				cursor: pointer;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: auto 90%;
+				background-color: $starter_background-color;
+				&:hover{
+					background-color: $starter_maincolor;
+					@include starter_transition;
+				}
+				.label{
+					color: #fff;
+					display: block;
+					float: left;
+					height: 36px;
+					line-height: 20px;
+					padding: 9px;
+					overflow: hidden;
+				}
+			}
+			.icon{
+				display: block;
+				width: 20px;
+				height: 37px;
+				float: left;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 17px auto;
+			}
+			.skip-nav {
+				.icon{
+					background-image: url("../scss/starter/images/menu-blanc.svg");
+				}
+			}
+			.skip-search{
+				.icon{
+					background-image: url("../scss/starter/images/recherche-blanc.svg");
+				}
+			}
+			.account-cart-wrapper{
+				@include gridle_grid ( 6 );
+				padding: 0;
+				.skip-cart, .skip-account{
+					@include gridle_grid ( 6 );
+					cursor: pointer;
+					background-color: $starter_background-color;
+					&:hover{
+						background-color: $starter_maincolor;
+						@include starter_transition;
+					}
+					.icon{
+						display: block;
+						width: 20px;
+						height: 37px;
+						float: left;
+						background-repeat: no-repeat;
+						background-position: center center;
+						background-size: 20px auto;
+					}
+					.label, .count{
+						color: #fff;
+						display: block;
+						float: left;
+						height: 36px;
+						line-height: 20px;
+						padding: 9px;
+						overflow: hidden;
+					}
+				}
+				.skip-cart{
+					.icon{
+						background-image: url("../scss/starter/images/panier_blanc.svg");
+					}
+				}
+				.skip-account{
+					.icon{
+						background-image: url("../scss/starter/images/compte-blanc.svg");
+					}
+				}
+			}
+		}
+	}
+
+	@include gridle_state(mobile) {
+		 header{
+		 	.page-header-container .skip-links{
+				.skip-nav, .skip-search, .skip-cart, .skip-account{
+					.label, .count{
+						display: none;
+					}
+					.icon{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

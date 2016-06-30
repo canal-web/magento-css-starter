@@ -51,12 +51,17 @@
 @mixin starter_button-secondaire{
 	font-size: 1.1rem;
 	padding: 0.5rem 3rem;
-	background-color: #fff;
 	color: $starter_maincolor;
 	border: 2px solid $starter_maincolor;
 	display: block;
 	cursor: pointer;
 	@include starter_transition;
+}
+
+/*Texte gras*/
+@mixin textegras{
+	font-family: $starter_mainfont;
+	font-weight: bold;
 }
 
 ////////////////////////////////////////////////////////////////
@@ -70,6 +75,9 @@ $starter_background-color: #1c1c1c;
 $starter_reussite: #00b365;
 /*Couleur erreur*/
 $starter_erreur: #c42635;
+/*Couleur border*/
+$starter_border: #ccc;
+$starter_bgclair: #F0F0F0;
 
 /*Typographie*/
 $starter_mainfont: arial;
