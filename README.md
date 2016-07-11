@@ -50,6 +50,6 @@ Avant de commencer, vérifier l'ensemble des variables et des mixin de ce docume
 
 ## Ne pas oublier
 * Mettre le module qui ajoute des class en fonction du navigateur et du support
-* Supprimer les entrées de menu inutiles "Biling agreements", "Recurring profiles", "My tags", "My applications", "My downloadable products"
-* Ajouter un lien de déconnexion
+* ~~Supprimer les entrées de menu inutiles "Biling agreements", "Recurring profiles", "My tags", "My applications", "My downloadable products"~~
+* ~~Ajouter un lien de déconnexion~~
 * Mettre le bloc "My orders" dans la colonne de gauche
