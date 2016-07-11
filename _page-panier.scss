@@ -1,0 +1,215 @@
+html{
+	//////////////////////////////////////////////////////////////////////////////////
+	/////////////**********PAGE PANIER*********/////////////
+	//////////////////////////////////////////////////////////////////////////////////
+ 	.checkout-cart-index{
+ 		.main-container{
+			margin: 0 auto;
+			max-width: 1255px;
+			display: block;
+			float: none;
+			button:hover{
+				opacity: 0.8;
+				@include starter_transition;
+			}
+			.page-title{
+				@include gridle_grid ( 12 );
+				h1{
+					@include starter_style-titre;
+					border-bottom: 1px solid $starter_border;
+				}
+				.checkout-types{
+					display: none;
+				}
+			}
+			.page-title+form{
+				@include gridle_grid ( 12 );
+			}
+			#discount-coupon-form {
+				background: $starter_bgclair;
+				padding: 10px 20px 20px 20px;
+				overflow: hidden;
+				margin-bottom: 10px;
+				.discount {
+					h2 {
+						@include starter_style-sous-titre;
+						padding-bottom: 10px;
+						border-bottom: 1px solid $starter_border;
+						margin-bottom: 10px;
+					}
+					.discount-form {
+						.button-wrapper, .field-wrapper {
+							display: block;
+							float: left;
+							input{
+								float: left;
+								margin-right: 3px;
+								height: 34px;
+							}
+							.button-wrapper{
+								display: block;
+								float: left;
+								height: 34px;
+							}
+						}
+						button{
+							height:33px;
+							@include starter_button-principal;
+							padding: 2px 5px;
+							font-size:0.8rem;
+						}
+						label {
+							display:inline-block;
+							font-weight: bold;
+							font-size: 0.938rem;
+							margin-right:15px;
+							float: left;
+							padding-top: 2px;
+						}
+					}
+				}
+			}
+			.shipping{
+				background: $starter_bgclair;
+				padding: 10px 20px 20px 20px;
+				overflow: hidden;
+				h2 {
+					@include starter_style-sous-titre;
+					padding-bottom: 10px;
+					border-bottom: 1px solid $starter_border;
+					margin-bottom: 10px;
+				}
+				.shipping-desc{
+					margin-bottom: 5px;
+				}	
+				.shipping-postcode{
+					clear: both;
+				}
+				li{
+					margin-bottom: 5px;
+				}	
+				.button2{
+					@include starter_button-principal;
+				}	
+				#co-shipping-method-form{
+					margin-top: 10px;
+					.button{
+						@include starter_button-secondaire;
+						padding: 0.5rem 30px;
+					}
+				}
+				select, input:not(.radio){
+					height: 34px;
+				}
+			}
+			#shopping-cart-totals-table{
+				background: $starter_bgclair;
+				overflow: hidden;
+				margin-bottom: 10px;
+				width: 100%;
+				td{
+					padding: 10px;
+					font-weight: bold;
+				}	
+				tfoot{
+					background-color: $starter_background-color;
+					td{
+						color: #fff;
+					}
+				}			
+			}
+			.checkout-types{
+				float: right;
+				.btn-proceed-checkout{
+					@include starter_button-principal;
+				}
+				.method-checkout-cart-methods-multishipping{
+					float: right;
+					margin-top: 5px;
+					a{
+						color: $starter_maincolor;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.footer-container{
+			clear: both;
+		}
+	}
+	//////////////////////////////////////////////////////////////////////////////////
+	/////////////**********MOBILE MOBLET*********/////////////
+	//////////////////////////////////////////////////////////////////////////////////
+	@include gridle_state ( mobile ) {
+	 	.checkout-cart-index{
+	 		.main-container{
+				#discount-coupon-form {
+					.discount {
+						button, input{
+							margin-top: 5px;
+						}
+					}
+				}
+			}
+		}	
+	}
+	@include gridle_state ( mobile-moblet ) {
+	 	.checkout-cart-index{
+	 		.main-container{
+				.cart-forms{
+					@include gridle_grid ( 12 );
+				}
+				.cart-totals-wrapper{
+					@include gridle_grid ( 12 );
+				}
+				.shipping{
+					.form-list{
+						 select{
+							width: 100%;
+						}
+						input{
+							width: 100%;
+						}
+					}	
+				}
+			}
+		}	
+	}
+
+	@include gridle_state ( tablet-desktop ) {
+	 	.checkout-cart-index{
+	 		.main-container{
+				.cart-forms{
+					@include gridle_grid ( 7 );
+					float: right;
+					clear: both;
+				}
+				.cart-totals-wrapper{
+					@include gridle_grid ( 7 );
+					padding-top: 0;
+					float: right;
+					clear: both;
+				}
+				.shipping{
+					.form-list{
+						 select{
+							width: 100%;
+						}
+						input{
+							width: 50%;
+						}
+						.shipping-country{
+							width: 50%;
+							float: left;
+						}
+						.shipping-region{
+							width: 48%;
+							float: left;
+							margin-left: 2%;
+						}
+					}	
+				}
+			}
+		}
+	}
+}

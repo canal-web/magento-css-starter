@@ -11,6 +11,8 @@
     * @import 'starter/connexioncompte';
     * @import 'starter/messages';
     * @import 'starter/panier-desktop';
+    * @import 'starter/page-panier';
+    * @import 'starter/checkout';
 
 ### Récuperer les documents
 

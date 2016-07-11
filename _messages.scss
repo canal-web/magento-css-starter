@@ -6,6 +6,8 @@ html{
 	.messages{
 		padding: 0;
 		margin-top: 5px;
+		clear: both;
+		@include gridle_grid ( 12 );
 		li{
 			text-align: center;
 		}
