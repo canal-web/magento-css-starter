@@ -132,6 +132,146 @@ html{
 					}
 				}
 			}
+			#shopping-cart-table {
+			    width:100%;
+			    #tab_head {
+			        background: $starter_maincolor;
+			        color:#fff;
+			        font-size: 0.938rem;
+			        th {
+			          padding:10px;
+			        }
+			        th:first-child {
+			          border-right: 0;
+			        }
+			    }
+			    input.qty{
+					width: 40px;
+			    }
+			    td {
+			      vertical-align: middle;
+			    }
+			    h2.product-name {
+			      font-weight: bold;
+			      color:$starter_background-color;
+			      font-size: 0.875rem;
+			      margin:0;
+			      margin-top: 15px;
+			    }
+			    .product-cart-sku {
+			      color:$starter_background-color;
+			    }
+			    .product-cart-image img {
+			      padding: 5px 5px 0px 5px;
+			    }
+			    tr:nth-child(odd):not(#tab_head) {
+			      background: #f6f6f6;
+			    }
+			    tr:nth-child(even):not(#tab_head) {
+			      background: #fcfcfc;
+			    }
+			    td.product-cart-actions .cart-links {
+			        display: none;
+			    }
+			    h2 {
+			      padding-bottom: 1rem;
+			    }
+			    a.product-image {
+			        margin-right: 15px;
+			        float:left;
+			    }
+			    tfoot#footerpanier {
+			      text-align: left;
+			      th, tr {
+			        background:none;
+			      }
+			      tr {
+			        height:60px;
+			      }
+			    }
+			    td.cart-footer-actions{
+			      background: #fff;
+			      padding: 20px 0 10px;
+			      border-bottom: 1px solid $starter_bgclair;
+			      button {
+			        margin-bottom: 1rem;
+			      }
+			    }
+			    td.product-cart-remove{
+			      width: 8%;
+			      a{
+					background-image: url("../scss/starter/images/poubelle.svg");
+					background-repeat: no-repeat;
+					text-indent: -9999px;
+					background-position: center center;
+					background-size: auto 100%;
+					display: block;
+					height: 25px;
+			      }
+			    }
+			    th.colonne_product {
+			      width:45%;
+			    }
+			    th.quantite_tableau {
+			      width:20%;
+			    }
+			    input.input-text.qty {
+			      display:inline-block;
+			      height: 33px;
+			      margin-top: 5px;
+			    }
+			    button.button.btn-update {
+			      height:33px;
+			      @include starter_button-secondaire;
+			      display:inline-block;
+			      margin-top: 5px;
+			      padding : 1px 6px!important; 
+			    }
+			    td, th {
+			      border-right:1px solid #fff;
+			      border-bottom:1px solid #fff;
+			    }
+			    .product-image{
+					margin: 0px auto!important;
+					display: block;
+					float: none!important;
+				}
+			    .product-name{
+			    	padding-bottom: 0;
+			    	a{
+			    		color: $starter_maincolor;
+			    		text-decoration: none;
+			    		text-transform: uppercase;
+						font-size: 1rem;
+			    	}
+			    }
+			    .cart-footer-actions{
+			    	text-align: right;
+			    	#empty_cart_button{
+						@include starter_button-secondaire;
+						background-color: #fff;
+						float: left;
+						margin-right: 10px;
+			    	}
+			    	.btn-update{
+						@include starter_button-principal;
+						float: left;
+						margin-right: 10px;
+			    	}
+			    	.or{
+			    		display: none;
+			    		float: left;
+			    	}
+			    	.btn-continue{
+						@include starter_button-principal;
+						float: left;
+			    	}
+			    	/***** Il faut ajouter une class hide dans le code pour le premier bouton btn-update ******/
+			    	.hide{
+			    		display: none;
+			    	}
+			    }
+			}
 		}
 		.footer-container{
 			clear: both;
@@ -150,12 +290,46 @@ html{
 						}
 					}
 				}
+				.product-cart-sku,
+				.product-cart-price{
+					margin-top: 5px;
+				}
+				.product-cart-total{
+					margin-bottom: 10px;
+				}
+				.product-image img{
+					margin: 0px auto;
+					display: block;			
+				}
+				.cart-footer-actions{
+					button{
+						width: 100%;
+					}
+				}
+			}
+		}	
+	}
+	@include gridle_state ( moblet ) {
+	 	.checkout-cart-index{
+	 		.main-container{
+				#shopping-cart-table {
+					.product-cart-image{
+						width: 30%;
+						float: left;
+						margin-right: 10px;
+						min-height: 160px;
+					}
+				}
 			}
 		}	
 	}
 	@include gridle_state ( mobile-moblet ) {
 	 	.checkout-cart-index{
 	 		.main-container{
+	 			h1{
+		 			margin-top: 20px!important;
+					margin-bottom: 20px;
+				}
 				.cart-forms{
 					@include gridle_grid ( 12 );
 				}
@@ -171,6 +345,61 @@ html{
 							width: 100%;
 						}
 					}	
+				}
+				#shopping-cart-table {
+					thead{
+						display: none;
+					}
+					td {
+						display:block;
+						padding: 0 10px;
+					}
+					td[data-rwd-label]:before {
+		   				 content: attr(data-rwd-label) ":";
+					}
+					tr.entete.first.last {
+						display:none;
+					}
+					tr, td {
+						border:none!important;
+						overflow: hidden;
+					}
+					td:not(.product-cart-image) {
+						text-align: left!important;
+					}
+					a.btn-remove.btn-remove2 span.supprimer {
+					    height: 20px;
+					    width: 20px;
+					    display: block;
+					    background-size: contain;
+					    text-indent: -9999px;
+					    margin: 5px 90%;
+					}
+					colgroup {
+						display:none;
+					}
+					a.product-image {
+						margin-bottom:70px;
+					}
+					td.product-cart-total.last {
+						font-weight: bold;
+						padding: 4px 10px;
+						background-color: #f0f0f0;
+						margin-top: 10px;
+					}
+					.btn-remove{
+						display: none;
+					}
+					.cart-links{
+						display: none;
+					}
+					.product-cart-remove{
+						display: none;
+					}
+					.product-cart-total{
+						font-weight: bold;
+						margin-top: 10px;
+					}
 				}
 			}
 		}	
@@ -208,6 +437,39 @@ html{
 							margin-left: 2%;
 						}
 					}	
+				}
+				#shopping-cart-table {
+					thead{
+						th{
+							background-color: $starter_background-color;
+							color: #fff;
+							padding: 10px;
+							font-weight: bold;						
+						}
+					}
+					tbody{
+						td{
+							padding: 10px;
+						}
+						.product-cart-info{
+							.btn-remove{
+								display: none;
+							}
+						}
+						.product-cart-image{
+							.cart-links{
+								display: none;
+							}
+						}
+						.product-cart-total{
+							span{
+								font-weight: bold;
+							}
+						}
+					    .product-image{
+						    max-width: 100px;
+						 }
+					}
 				}
 			}
 		}
