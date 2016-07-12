@@ -14,9 +14,7 @@
     * @import 'starter/page-panier';
     * @import 'starter/checkout';
 
-### Récuperer les documents
-
-###Liste des documents
+### Liste des documents
 * **general.scss** : tout ce qui est commun à tous les sites, possibilité de changer l'aspect des input et select ainsi que les tailles de polices en fonction des résolutions
 * **_connexioncompte.scss** : uniquemement la page de connexion
 * **_compte.scss** : concerne toute la partie compte une fois connecté ainsi que la page d'inscription et le mot de passe oublié

@@ -17,6 +17,7 @@ html{
 				h1{
 					@include starter_style-titre;
 					border-bottom: 1px solid $starter_border;
+					padding-bottom: 10px;
 				}
 				.checkout-types{
 					display: none;
