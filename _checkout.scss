@@ -80,17 +80,25 @@ html{
 			      }
 			      a {
 			        margin-left: 20px;
+			        color: $starter_maincolor;
 			      }
 			    }
 			}
 			li.section:not(.active) {
 			    .step-title {
+			    border-bottom:1px solid white;
 			      span.number, h2 {
 			        color:#a7a7a7;
 			      }
-			      border-bottom:1px solid white;
 			    }
 			}
+			li.section:not(.allow) {
+			    .step-title {
+			      a{
+			      	color: $starter_border;
+			      }
+			    }
+			}			
 			#bloc_contact {
 			    h3 {
 			      border-bottom: 1px solid #fff;
@@ -169,18 +177,45 @@ html{
 	  			float: right;
 	  			font-size: 0.7rem;
 	  		}
-	  		#opc-billing{
+	  		#billing-buttons-container{
+	  			margin-top: 10px;
+	  		}
+	  		.remember-me-popup-head, .remember-me-popup-body{
+	  			display: none;
+	  		}
+	  		#opc-billing, #shipping-new-address-form{
 				input:not(.radio), select{
 					width: 100%;
 				}
 	  		}
+  			#checkout-progress-wrapper{
+				.block-title{
+					span{
+						@include starter_style-sous-titre;
+						border-bottom: 1px solid $starter_border;
+						padding-bottom: 5px;
+						margin-bottom: 10px;
+						font-size: 1rem;
+					}
+				}
+				a{
+					color: $starter_maincolor;
+					text-decoration: none;
+				}
+				dt{
+					@include starter_style-sous-sous-titre;
+				}
+				.block-content{
+					clear: both;
+					padding-top: 10px;
+				}
+  			}
 	 	}
 
 	//////////////////////////////////////////////////////////////////////////////////
 	/////////////**********MOBILE-MOBLET**********/////////////
 	//////////////////////////////////////////////////////////////////////////////////
-	@include gridle_state (tablet-desktop) {
-		/* ONEPAGE CHECKOUT */
+	@include gridle_state (desktop) {
 		.checkout-onepage-index {
 			.col-main{
 				@include gridle_grid ( 9 );
@@ -188,6 +223,24 @@ html{
 			.sidebar{
 				@include gridle_grid ( 3 );
 			}
+		}
+	}
+
+	@include gridle_state (tablet) {
+		.checkout-onepage-index {
+			.col-main{
+				@include gridle_grid ( 12 );
+			}
+			.sidebar{
+				display: none;
+			}
+		}
+	}
+
+
+	@include gridle_state (tablet-desktop) {
+		/* ONEPAGE CHECKOUT */
+		.checkout-onepage-index {
 			li#opc-login {
 				.col-1, .col-2 {
 					width:48%;
@@ -196,6 +249,30 @@ html{
 					.button{
 						margin-top: 10px;
 					}
+				}
+			}
+			#checkout-step-billing,
+			#shipping-new-address-form{
+				.field:nth-child(odd){
+					width: 49%;
+					float: left;
+					margin-right: 1%;
+					padding-top: 5px;
+				}
+				.field:nth-child(even){
+					width: 49%;
+					float: left;
+					margin-left: 1%;
+					padding-top: 5px;
+				}
+				.fields{
+					clear: both;
+				}
+				.wide{
+					padding-top: 5px;
+				}
+				.name-lastname{
+					clear: both;
 				}
 			}
 		}
@@ -212,42 +289,113 @@ html{
 	}	
 
 	@include gridle_state (mobile-moblet) {
-		.col-main{
-			@include gridle_grid ( 12 );
-		}
-		.sidebar{
-			display: none;
-		}
-		/* ONEPAGE CHECKOUT */
 		.checkout-onepage-index {
-			li#opc-login {
-				.col-1, .col-2 {
-					width:100%;
-					display:inline-block;
-					vertical-align: top;
-					.buttons-set{
-						margin-bottom: 20px;
-						margin-top: 10px;
-						.required{
-							display: none;
+			.col-main{
+				@include gridle_grid ( 12 );
+			}
+			.sidebar{
+				display: none;
+			}
+			/* ONEPAGE CHECKOUT */
+			.checkout-onepage-index {
+				li#opc-login {
+					.col-1, .col-2 {
+						width:100%;
+						display:inline-block;
+						vertical-align: top;
+						.buttons-set{
+							margin-bottom: 20px;
+							margin-top: 10px;
+							.required{
+								display: none;
+							}
 						}
 					}
 				}
+				li#opc-login h3{
+					line-height: 1.5rem;
+					min-height: 0!important;
+				}
 			}
-			li#opc-login h3{
-				line-height: 1.5rem;
-				min-height: 0!important;
+			#checkout-step-billing,
+			#shipping-new-address-form{
+				.field{
+					padding-top: 5px;
+				}
+				.fields{
+					clear: both;
+				}
+				.wide{
+					padding-top: 5px;
+				}
+			}
+			#checkout-step-login{
+				.col-1{
+					.description{
+						padding-bottom: 10px;
+					}
+				}
+				.col-2{
+					h3{
+						padding: 10px 0;
+					}
+				}
+			}
+			.no-display{
+				display: none;
+			}
+			#checkout-progress-wrapper{
+				margin-bottom: 10px;
 			}
 		}
 	}
 
-	/*Succes*/
-	@include gridle_state (mobile) {
-		.checkout-onepage-success {
-		  h2 {
-		    font-size: 1rem;
-			line-height: 1.2rem;
-		  }
-		}	
+	//////////////////////////////////////////////////////////////////////////////////
+	/////////////**********PAGE OK**********/////////////
+	//////////////////////////////////////////////////////////////////////////////////
+	.checkout-cart-index{
+		.cart-empty{
+			@include gridle_grid ( 12 );
+			a{
+				color: $starter_maincolor;
+				font-weight: bold;
+				text-decoration: none;
+			}
+		}
+	}
+	.checkout-onepage-success{
+	  	.main-container {
+		    margin: 0 auto;
+			max-width: 1255px;
+			display: block;
+			float: none;
+			@include gridle_grid ( 12 );
+		    h1{
+		      border-bottom: 1px solid $starter_border;
+		      padding-bottom: 1rem;
+		      padding-top: 1rem;
+		      margin-bottom: 1rem;
+		      clear: both;
+		      @include starter_style-titre;
+		    }
+		    .sub-title{
+		    	@include starter_style-sous-titre;
+		    }
+		    button {
+		      @include starter_button-principal;
+		    }
+		    button:hover {
+		      opacity: 0.8;
+		      @include starter_transition;
+		    }
+		    a{
+		    	color: $starter_maincolor;
+		    	text-decoration: none;
+		    	font-weight: bold;
+		    }
+		    .buttons-set{
+		    	margin-top: 10px;
+		    }
+		}		
 	}
 }

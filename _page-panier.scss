@@ -23,7 +23,9 @@ html{
 					display: none;
 				}
 			}
-			.page-title+form{
+			.page-title+form,
+			.page-title+.messages+form
+			{
 				@include gridle_grid ( 12 );
 			}
 			#discount-coupon-form {
