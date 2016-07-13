@@ -168,10 +168,10 @@ html{
 			      padding: 5px 5px 0px 5px;
 			    }
 			    tr:nth-child(odd):not(#tab_head) {
-			      background: #f6f6f6;
+			      background: $starter_bgclair;
 			    }
 			    tr:nth-child(even):not(#tab_head) {
-			      background: #fcfcfc;
+			      background: $starter_bgclair;
 			    }
 			    td.product-cart-actions .cart-links {
 			        display: none;
@@ -387,7 +387,7 @@ html{
 					td.product-cart-total.last {
 						font-weight: bold;
 						padding: 4px 10px;
-						background-color: #f0f0f0;
+						background-color: $starter_bgclair;
 						margin-top: 10px;
 					}
 					.btn-remove{

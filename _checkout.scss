@@ -57,7 +57,7 @@ html{
 			    padding: 0;
 			}
 			.step {
-			    background:#fcfcfc;
+			    background:#fafafa;
 			    padding: 15px;
 			}
 			.validation-advice {
@@ -67,7 +67,7 @@ html{
 			}
 			li.section {
 			    .step-title {
-			      background:#f6f6f6;
+			      background:$starter_bgclair;
 			      padding: 1rem 0;
 			      span.number, h2 {
 			        text-transform: uppercase;
@@ -88,7 +88,7 @@ html{
 			    .step-title {
 			    border-bottom:1px solid white;
 			      span.number, h2 {
-			        color:#a7a7a7;
+			        color:#b3b3b3;
 			      }
 			    }
 			}
@@ -157,7 +157,7 @@ html{
 			      margin-right: 5px;
 			    }
 			    thead tr.first.last {
-			      background: #252024;
+			      background: $starter_background-color;
 			      color: #fff;
 			      font-size: 1.125rem;
 			      font-weight: bold;
@@ -167,7 +167,7 @@ html{
 			      }
 			    }
 			    tfoot {
-			      background: #f6f6f6;
+			      background: $starter_bgclair;
 			    }
 			    tfoot tr td {
 			        padding: 5px;
