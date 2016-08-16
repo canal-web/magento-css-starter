@@ -1,0 +1,87 @@
+html{
+	//////////////////////////////////////////////////////////////////////////////////
+	/////////////**********Tableau descriptif visible en page detail**********/////////////
+	//////////////////////////////////////////////////////////////////////////////////
+	.catalog-product-view .main-container .tabs-wrapper{
+		/*Supprimer en fonction de la structure*/
+		margin:0 auto;
+		max-width:$max-width;
+		float: none;
+		display: block;
+		/*Fin de la suppression*/
+		overflow: hidden;
+		.tab-list{
+			li{
+				cursor: pointer;
+			}
+		}
+		.tab-panel{
+			padding : 1rem;
+			background-color: $starter_bgclair;
+			table{
+				.label{
+					@include textegras;
+					max-width: 50%;
+					width: 70px;
+					display: block;
+					float: left;
+				}
+				.value{
+					float: left;
+				}
+			}
+		}
+	}
+	/////////////**********MOBILE-MOBLET**********/////////////
+	@include gridle_state ( mobile-moblet ) {
+		.catalog-product-view .main-container .tabs-wrapper{
+			.tab-heading{
+				padding: 1rem;
+				@include starter_style-sous-sous-titre;
+				background-color: $starter_bgfonce;
+				cursor: pointer;
+				background-image: url("../scss/starter/images/fleche-grise-bas.svg");
+				background-repeat: no-repeat;
+				background-position: center right 10px;
+			}
+			.active-tab-heading{
+				background-color: $starter_bgclair;
+				background-image: url("../scss/starter/images/fleche-grise-haut.svg");
+			}
+			.tab-list{
+				display: none;
+			}
+		}		
+	}
+
+	/////////////**********TABLET-DESKTOP**********/////////////
+	@include gridle_state ( tablet-desktop ) {
+		.catalog-product-view .main-container .tabs-wrapper{
+			.tab-heading{
+				display: none;
+			}
+			.tab-list{
+				background-color: $starter_bgfonce;
+				overflow: hidden;
+				li{
+				/*Modifier en fonction du nombre d'onglets*/
+					@include starter_style-sous-sous-titre;
+					@include gridle_grid ( 3 );
+					margin-top: 0;
+					text-decoration: none;
+					border-right: 3px solid $starter_bgfonce;
+				}
+				li+li{
+					border-left: 3px solid $starter_bgfonce;
+				}
+				.active-tab{
+					background-color: $starter_bgclair;
+					border-right: 3px solid #fff;
+				}
+				li+.active-tab{
+					border-left: 3px solid #fff;
+				}
+			}
+		}		
+	}
+}

@@ -13,6 +13,7 @@
     * @import 'starter/panier-desktop';
     * @import 'starter/page-panier';
     * @import 'starter/checkout';
+    * @import 'starter/tableau-detail';
 
 ### Liste des documents
 * **general.scss** : tout ce qui est commun à tous les sites, possibilité de changer l'aspect des input et select ainsi que les tailles de polices en fonction des résolutions
@@ -22,6 +23,7 @@
 * **_panier.scss** : processus panier, checkout et panier du menu
 * **_menu-mobile.scss**: uniquement le menu mobile
 * **_panier-desktop.scss**: uniquement le panier desktop
+* **_tableau-detail.scss**: descriptif détaillé sous forme de tableau à onglets dans la page produit
 
 ## Le document _variablesmixin.scss
 
